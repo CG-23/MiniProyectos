@@ -29,7 +29,7 @@ public class Receta {
     @Column(name = "descripcion")
     private Text preparacionReceta;
 
-    @OneToMany(mappedBy = "player", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "Receta", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
     private List<Ingredientes> listIngredientes;
     
