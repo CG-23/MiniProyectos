@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  receta-db:
+    image: mysql
+    networks:
+      - spring-web
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=receta
+      - MYSQL_DATABASE=receta
+      - MYSQL_USER=receta
+      - MYSQL_PASSWORD=receta
+networks:
+  spring-web:
