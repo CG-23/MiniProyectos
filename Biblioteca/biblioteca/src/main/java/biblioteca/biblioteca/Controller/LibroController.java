@@ -13,6 +13,7 @@ import biblioteca.biblioteca.Entity.Libro;
 import biblioteca.biblioteca.ServiceInterface.LibroService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
@@ -38,8 +39,8 @@ public class LibroController {
         libroService.deleteLibro(titulo);
     }
     
-    @PostMapping(value="/{libroId}")
-    public Libro updateLibro(@PathVariable(name = "libroId") Libro libro) {
+    @PutMapping
+    public Libro updateLibro(@RequestBody Libro libro) {
         return libroService.updateLibro(libro);
     }
 
