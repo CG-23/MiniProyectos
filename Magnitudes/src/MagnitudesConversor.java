@@ -10,7 +10,7 @@ public class MagnitudesConversor {
         unidades.put("cl", 0.01);
         unidades.put("dl", 0.1);
         unidades.put("m3", 1000.0);
-        double resultado = valor * unidades.get(unidad);
+        double resultado = valor / unidades.get(unidad);
         return (valor+" litros = "+resultado+" "+ unidad);
     }
 
@@ -22,7 +22,7 @@ public class MagnitudesConversor {
         unidades.put("mm", 0.001);
         unidades.put("km", 1000.0);
 
-        double resultado = valor * unidades.get(unidad);
+        double resultado = valor / unidades.get(unidad);
         return (valor+" metros = "+resultado+" "+ unidad);
     }
 
@@ -33,7 +33,7 @@ public class MagnitudesConversor {
         unidades.put("mg", 0.001);
         unidades.put("kg", 1000.0);
 
-        double resultado = valor * unidades.get(unidad);
+        double resultado = valor / unidades.get(unidad);
         return (valor+" gramos = "+resultado+" "+ unidad);
     }
 
@@ -47,7 +47,7 @@ public class MagnitudesConversor {
         unidades.put("mes", 2629800.0); // promedio de 30.44 días por mes
         unidades.put("a", 31557600.0); // promedio de 365.25 días por año
 
-        double resultado = valor * unidades.get(unidad);
+        double resultado = valor / unidades.get(unidad);
         return (valor+" segundos = "+resultado+" "+ unidad);
     }
 }
