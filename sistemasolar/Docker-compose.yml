@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  planetas-db:
+    image: mysql
+    networks:
+      - spring-web
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=planetas
+      - MYSQL_DATABASE=planetas
+      - MYSQL_USER=planetas
+      - MYSQL_PASSWORD=planetas
+networks:
+  spring-web:
